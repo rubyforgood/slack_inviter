@@ -1,0 +1,16 @@
+h1 ATLDevs Chat
+p
+  | ATLDevs is a place for developers in Atlanta and the surrounding area to
+    talk about Ruby, DevOps, Go, Docker, &lt;insert language here&gt;, &lt;insert
+    framework here&gt;, jobs, and whatever else piques our interest.
+
+p
+  | Submit your email address below and our robots will automatically send you
+    an invite :)
+
+= form_for @invitation do |f|
+  = f.email_field :email, size: 40, placeholder: "your_email@example.com"
+
+  = f.submit
+
+
