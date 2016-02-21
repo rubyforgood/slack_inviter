@@ -1,12 +1,18 @@
-h1 RubyforGood Slack Signup
+.invite
+  h1 Ruby for Good Slack
 
-p
-  | Submit your email address below and our robots will automatically send you
-    an invite :)
+  p
+    | Submit your email address below and our robots will automatically send you
+      an invite to our Slack Server :-)
 
-= form_for @invitation do |f|
-  = f.email_field :email, size: 40, placeholder: "your_email@example.com"
+  = form_for @invitation do |f|
+    = f.email_field :email, size: 40, placeholder: "your_email@example.com"
+    = f.submit
 
-  = f.submit
+  p
+    |
+      Already have an account? Click <a href="rubyforgood.slack.com">here</a> to sign in.
 
+.logo
+  = image_tag "red-panda.png"
 
