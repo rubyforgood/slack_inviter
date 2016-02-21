@@ -6,11 +6,11 @@ default: &default
 
 development:
   <<: *default
-  database: atldevs_development
+  database: rubyforgood_slack_development
 
 test:
   <<: *default
-  database: atldevs_test
+  database: rubyforgood_slack_test
 
 production:
   <<: *default
