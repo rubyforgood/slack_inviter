@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+script:
+  - ./bin/rake db:create
+  - ./bin/rake db:migrate RAILS_ENV=test
+  - ./bin/rake db:test:prepare
+  - ./bin/rspec
+deploy:
+  provider: heroku
+  app:
+    master: rubyforgood
+  run: rake db:migrate
+  api_key:
+    secure: YPhkud2SHOqhYDBFYp9gYmcqGN3vcA0dpZ183W6kevpkgjEL0ZvmaPu0J5UZPoGQ2T7hfqLGs9EpMfjAyQ4thsDLGoefIct4M6WUxokZIRnaE7g548Kmu/WOnZsGU0uaIPVHC/z7fViWJUm4aFSzAzElXVPLK0w8aca8sAidk7iwAba+oQsuo53KDtxwzEFPrnhBGJCNMIR3HVTXIxZ0GJscYKIqReIBjCH+MbG/cy6CR19caS/72hyLHqKBGdP1zgKtA3cUpGq2QiNfwjTgiRo7Jpf9Arh5D1K4QdWe2bI4yEKyVReqUDDeqwXQS1LIBP+pgEjzyA2tLIQ/+JrUWwm9V7tUDs/ANop01tvdgTx1PTu0iRjDmo+7dNVhSxzEY8sUY22gT/nOqf44HgpLgaKpPcEfdm6NniEjbLzUfYAQMfNzAbC44L8Ep9oe/2Jzhn/fndhoL4UVwmjQu4uZC+Fx1iLUcGY6HJszQ0RL9qnRchWOsBD3V3bSlk1ZVLvOg/TiQGVTPVAxWYS9ch4QzA6Vzy0msRTEW0BK7bTyfMTg39N+m9tzfsBtbDUeD77fT3Bywj5/a4czq9ncZAJSWG9eXSEBhzSC8RePRLiNbNfBnwv/bPPnIN4toYB/V/gclI6B5nFhDnx7Gwd/TBQ9wZNN7LYFF+s9n+/R3J3e3O0=
