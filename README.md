@@ -1,6 +1,9 @@
 # Ruby for Good Slack Invatation
 
-The application based on the application behind the [ATLDevs automatic invitation system](https://atldevs.herokuapp.com)
+The source for [Ruby for Good's Slack Inviter](https://rubyforgood.herokuapp.com/).
+
+The application based [Andy Lindeman's](https://github.com/alindeman) [ATLDevs automatic invitation system](https://github.com/alindeman/atldevs).
+
 
 ## Prerequisites
 
