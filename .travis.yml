@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 script:
-- ./bin/rspec
+  - echo "yolo"
 deploy:
   provider: heroku
   app:
